@@ -180,7 +180,7 @@
                                 <div class="team-player">
                                     <img src="{{ asset('/img/PascualLemus.jpg') }}" alt="Thumbnail Image" class="img-raised img-circle">
                                     <h4 class="title">Pascual Lemus<br />
-                                        <small class="text-muted">Developer</small>
+                                        <small class="text-muted">Developer Engineer</small>
                                     </h4>
                                     {{-- <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
                                     <a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-twitter"></i></a>

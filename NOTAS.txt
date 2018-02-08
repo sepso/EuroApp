@@ -5,3 +5,11 @@ MORADO ----->   box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px
 
 				.card .header-primary {
   				background: linear-gradient(60deg, #ab47bc, #7b1fa2);  #3296C8   #003B57
+
+
+
+git status
+git add *.*
+git commit -a or git commit -am "SePsO"
+git push -u origin master
+
