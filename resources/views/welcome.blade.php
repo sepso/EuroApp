@@ -38,7 +38,7 @@
 
             <div class="collapse navbar-collapse" id="navigation-example">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                    {{-- <li>
                         <a href="../components-documentation.html" target="_blank">
                             Components
                         </a>
@@ -62,7 +62,38 @@
                         <a href="https://www.instagram.com/CreativeTimOfficial" target="_blank" class="btn btn-simple btn-white btn-just-icon">
                             <i class="fa fa-instagram"></i>
                         </a>
-                    </li>
+                    </li> --}}
+{{--                     <li>
+                        <a href="#" target="_blank">
+                            LogIn
+                        </a>
+                    </li> --}}
+
+                    @guest
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Register</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endguest
+                        
                 </ul>
             </div>
         </div>
@@ -173,33 +204,33 @@
                     <div class="section landing-section">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
-                                <h2 class="text-center title">Work with us</h2>
-                                <h4 class="text-center description">Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will responde get back to you in a couple of hours.</h4>
+                                <h2 class="text-center title">Trabajando para ti</h2>
+                                <h4 class="text-center description">Denos algunos detalles sobre nuestra aplicación y trabajo, algunas líneas sobre cada uno de nosotros, o cualquier colaboración adicional que nos pueda brindar, y le responderemos con gratitud.</h4>
                                 <form class="contact-form">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group label-floating">
-                                                <label class="control-label">Your Name</label>
+                                                <label class="control-label">Tu Nombre</label>
                                                 <input type="email" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group label-floating">
-                                                <label class="control-label">Your Email</label>
+                                                <label class="control-label">Tu Email</label>
                                                 <input type="email" class="form-control">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group label-floating">
-                                        <label class="control-label">Your Messge</label>
+                                        <label class="control-label">Tu Mensaje</label>
                                         <textarea class="form-control" rows="4"></textarea>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-4 col-md-offset-4 text-center">
                                             <button class="btn btn-primary btn-raised">
-                                                Send Message
+                                                Envía tu mensaje
                                             </button>
                                         </div>
                                     </div>
@@ -214,7 +245,7 @@
 
         <footer class="footer">
             <div class="container">
-                <nav class="pull-left">
+                {{-- <nav class="pull-left">
                     <ul>
                         <li>
                             <a href="http://www.creative-tim.com">
@@ -237,13 +268,12 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </nav> --}}
                 <div class="copyright pull-right">
-                    &copy; 2016, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                    &copy; 2018, Hecho por EuroTeam <i class="fa fa-rebel"></i> 
                 </div>
             </div>
         </footer>
-
     </div>
 </body>
 
