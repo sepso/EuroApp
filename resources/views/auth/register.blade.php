@@ -6,7 +6,9 @@
     <div class="row">
         <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
             <div class="card card-signup">
-                <form class="form" method="" action="">
+                <form class="form" method="POST" action="{{ route('register') }}">
+                    {{ csrf_field() }}
+
                     <div class="header header-primary text-center">
                         <h4>Log In</h4>
                         {{-- <div class="social-line">
@@ -28,7 +30,13 @@
                             <span class="input-group-addon">
                                 <i class="material-icons">face</i>
                             </span>
-                            <input type="text" class="form-control" placeholder="Nombre...">
+                            <input id="name" type="text" class="form-control" placeholder="Nombre..." name="name" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif                   
                         </div>
 
                         <div class="input-group">
