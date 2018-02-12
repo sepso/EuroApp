@@ -32,7 +32,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">{{ config('app.name', 'Laravel') }}</a>
+                <a class="navbar-brand" href="/">{{ config('app.name', 'Laravel') }}</a>
             </div>
 
             <div class="collapse navbar-collapse" id="navigation-example">
@@ -187,7 +187,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="team-player">
-                                    <img src="{{ asset('/img/SergioSojo.jpg') }}" alt="Thumbnail Image" class="img-raised img-circle">
+                                    <img src="{{ asset('/img/SergioSojo.JPG') }}" alt="Thumbnail Image" class="img-raised img-circle">
                                     <h4 class="title">Sergio Sojo<br />
                                         <small class="text-muted">Developer</small>
                                     </h4>
