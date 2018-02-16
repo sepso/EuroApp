@@ -70,7 +70,7 @@
 
                 @guest
                     <li><a href="{{ route('login') }}">Login</a></li>
-                    <li><a href="{{ route('register') }}">Register</a></li>
+                    <li><a href="{{ route('register') }}">Registro</a></li>
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -199,7 +199,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section landing-section">
+
+                    <div class="section landing-section text-left">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
                                 <h2 class="text-center title">Trabajando para ti</h2>

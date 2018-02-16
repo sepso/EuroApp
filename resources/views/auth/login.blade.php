@@ -35,7 +35,7 @@
                             <span class="input-group-addon">
                                 <i class="material-icons">email</i>
                             </span>
-                            <input type="text" class="form-control" placeholder="Email...">
+                            <input type="text" class="form-control" placeholder="Email..." autofocus>
                         </div>
 
                         <div class="input-group">

@@ -10,7 +10,7 @@
                     {{ csrf_field() }}
 
                     <div class="header header-primary text-center">
-                        <h4>Log In</h4>
+                        <h4>Registro</h4>
                         {{-- <div class="social-line">
                             <a href="#pablo" class="btn btn-simple btn-just-icon">
                                 <i class="fa fa-facebook-square"></i>
