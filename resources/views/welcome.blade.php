@@ -188,7 +188,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="team-player">
-                                    <img src="{{ asset('/img/SergioSojo.JPG') }}" alt="Thumbnail Image" class="img-raised img-circle">
+                                    <img src="{{ asset('/img/SergioSojo.jpg') }}" alt="Thumbnail Image" class="img-raised img-circle">
                                     <h4 class="title">Sergio Sojo<br />
                                         <small class="text-muted">Developer</small>
                                     </h4>
