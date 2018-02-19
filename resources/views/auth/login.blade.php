@@ -49,7 +49,7 @@
 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="optionsCheckboxes" checked>
+                                <input type="checkbox" name="optionsCheckboxes" {{-- checked --}}>
                                 Recuerdame...
                             </label>
                         </div>

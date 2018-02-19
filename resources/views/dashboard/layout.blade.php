@@ -181,7 +181,7 @@ desired effect
               <!-- The user image in the navbar-->
               <img src="{{ asset('adminlte/img/avatar04.png') }}" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">Sergio Sojo</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -189,8 +189,8 @@ desired effect
                 <img src="{{ asset('adminlte/img/avatar04.png') }}" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  Sergio Sojo - Developer
+                  <small>Member since Jea. 2018</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -241,7 +241,7 @@ desired effect
           <img src="{{ asset('adminlte/img/avatar04.png') }}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Sergio Sojo</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -347,7 +347,8 @@ desired effect
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    {{-- <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved. --}}
+    &copy; 2018, Hecho por EuroTeam <i class="fa fa-rebel"></i> 
   </footer>
 
   <!-- Control Sidebar -->
