@@ -105,7 +105,7 @@
 
                     <div class="footer text-center">
                             <button type="submit" class="btn btn-primary btn-raised">
-                                Log In
+                                Siguiente
                             </button>
 
                     </div>

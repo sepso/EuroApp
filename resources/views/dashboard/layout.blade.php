@@ -3,11 +3,17 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('/img/euroapplogo001.png') }}">
+  <link rel="icon" type="image/png" href="{{ asset('/img/euroapplogo001.png') }}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>EuroApp | Starter</title>
+
+  <title>{{ config('app.name', 'Laravel') }}</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="{{ asset('adminlte/bc/bootstrap/dist/css/bootstrap.min.css') }}">
@@ -181,7 +187,7 @@ desired effect
               <!-- The user image in the navbar-->
               <img src="{{ asset('adminlte/img/avatar04.png') }}" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Sergio Sojo</span>
+              <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -189,12 +195,12 @@ desired effect
                 <img src="{{ asset('adminlte/img/avatar04.png') }}" class="img-circle" alt="User Image">
 
                 <p>
-                  Sergio Sojo - Developer
-                  <small>Member since Jea. 2018</small>
+                  {{ Auth::user()->name }} {{ Auth::user()->lastname }}
+                  <small>{{ Auth::user()->created_at }}</small>
                 </p>
               </li>
               <!-- Menu Body -->
-              <li class="user-body">
+              {{-- <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
                     <a href="#">Followers</a>
@@ -207,14 +213,27 @@ desired effect
                   </div>
                 </div>
                 <!-- /.row -->
-              </li>
+              </li> --}}
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
+                {{-- <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
+                </div> --}}
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  {{-- <a href="#" class="btn btn-default btn-flat">Sign out</a> --}}
+                  
+                      <a href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();"
+                          class="btn btn-default btn-flat">
+                          Logout
+                      </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                      </form>
+                  
+
                 </div>
               </li>
             </ul>
@@ -241,9 +260,9 @@ desired effect
           <img src="{{ asset('adminlte/img/avatar04.png') }}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Sergio Sojo</p>
+          <p>{{ Auth::user()->name }} {{ Auth::user()->lastname }}</p>
           <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          {{-- <a href="#"><i class="fa fa-circle text-success"></i> Online</a> --}}
         </div>
       </div>
 
@@ -313,15 +332,19 @@ desired effect
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+
     <section class="content-header">
-      <h1>
+      @yield('pageheader')
+
+      {{-- <h1>
         Page Header
         <small>Optional description</small>
-      </h1>
-      <ol class="breadcrumb">
+      </h1> --}}
+
+      {{-- <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
-      </ol>
+      </ol> --}}
     </section>
 
     <!-- Main content -->
